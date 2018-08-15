@@ -1,0 +1,35 @@
+input.onButtonPressed(Button.A, () => {
+    led.enable(true)
+    images.iconImage(IconNames.Heart).showImage(0)
+    OLED.init(64, 128)
+    OLED.showString2("I am a Hacker")
+    OLED.showString2("DefCon #26")
+    basic.pause(400)
+    OLED.clear()
+    OLED.showString("Abigail Sverdlik")
+    OLED.showString("Wells Middle School 2018")
+})
+input.onButtonPressed(Button.B, () => {
+    led.enable(true)
+    images.iconImage(IconNames.Skull).showImage(0)
+    OLED.init(64, 128)
+    OLED.showString("For Kids Only")
+    OLED.showString("Can you Hear This?")
+    music.playTone(150000, music.beat(BeatFraction.Breve))
+    basic.pause(200)
+    OLED.clear()
+    OLED.showString("Abigail Sverdlik")
+    OLED.showString("Wells Middle School 2018")
+})
+basic.showLeds(`
+    # . # . #
+    # . # . .
+    # # # . #
+    # . # . #
+    # . # . #
+    `)
+OLED.clear()
+OLED.init(64, 128)
+OLED.showString("Abigail Sverdlik")
+OLED.showString("Wells Middle School 2018")
+
